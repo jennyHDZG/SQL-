@@ -85,6 +85,6 @@ ORDER BY revenue DESC;
 SELECT company_name, MAX(employees) AS most_employees
 FROM fortune_companies; 
  
-#What was the average amount paid time off for all companies?
+#What was the average amount paid time off days for all companies?
 SELECT AVG(paid_time_off_days) as PTO_Days 
 FROM fortune_companies;
