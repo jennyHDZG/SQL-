@@ -59,7 +59,7 @@ VALUES
 
 #Analysis: 
 
-Assigned all companies in the Energy industry as ""High Employee Tenure", " Average Employee Tenure",and  "low Employee Tenure" based on the employee tenure recorded. 
+# Assigned all companies in the Energy industry as ""High Employee Tenure", " Average Employee Tenure",and  "low Employee Tenure" based on employee tenure data presented. 
 SELECT  company_name,industry, avg_employee_tenure,
 CASE WHEN avg_employee_tenure >= 6.0 Then "High Employee Tenure"
 WHEN avg_employee_tenure >= 4.0 Then " Average Employee Tenure"
@@ -68,7 +68,7 @@ END AS "rating company tenure"
 FROM fortune_companies
 WHERE industry="Energy";
 
-#Which industries have more than 200 employees, categorize by industry? 
+#Which industries have more than 200 employees? Categorize by industry. 
 SELECT industry, SUM(employees) AS amount_employees
 FROM fortune_companies 
 GROUP BY industry
@@ -85,6 +85,6 @@ ORDER BY revenue DESC;
 SELECT company_name, MAX(employees) AS most_employees
 FROM fortune_companies; 
  
-#What was the average amount of maternity leave weeks 
-SELECT AVG(maternity_leave_weeks) as avg_maternity_leave
+#What was the average amount paid time off for all companies?
+SELECT AVG(paid_time_off_days) as PTO_Days 
 FROM fortune_companies;
